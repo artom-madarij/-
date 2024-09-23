@@ -12,7 +12,7 @@ d = 0.001
 def function(x):
     suma = 0
     k = 1
-    while True:
+    while x <= b:
         mm = ((-1) ** k * m.cos(2 ** k * x) ** 4) / 2 ** (2 * k)
         suma += mm
         if abs(mm) < d:
