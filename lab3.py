@@ -1,11 +1,18 @@
-def number(n):
-    if n >= 0:
-        return len(str(n))
+def cust_len(l):
+    count = 0
+    for i in l:
+        count += 1
+    return count
+
+
+def number(x):
+    if x >= 0:
+        return cust_len(str(n))
     else:
-        return 'Число менше 0'
+        return 'Ваше число менше 0'
 
 
-def create_m(Розміри):
+def create_matrix(Розміри):
     matrix = []
     for i in range(Розміри):
         line = [Розміри] * Розміри
@@ -13,14 +20,14 @@ def create_m(Розміри):
     return matrix
 
 
-def print_m(Матриця):
+def print_matrix(Матриця):
     for line in Матриця:
         for element in line:
             print(element, end='')
         print()
 
-k = 0
-while k == 0:
+
+while True:
     try:
         n = int(input("Введіть ціле число: "))
         break
@@ -29,6 +36,6 @@ while k == 0:
 num = number(n)
 print("Кількість цифр у числі:", num)
 
-matrix = create_m(num)
+matrix = create_matrix(num)
 print("Матриця:")
-print_m(matrix)
+print_matrix(matrix)
